@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AOS &bull; Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login Example">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <link href="css/mediaqueries.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+
+    <div class="login rounded">
+      <!-- Form with 'novalidate' attribute, to prevent submission & manually check for 'required' fields-->
+      <form id="userLogin" class="loginForm" novalidate>
+        <h1>User Login</h1>
+        <input type="text" id="username" class="rounded" name="username" placeholder="Apple ID" required="true" 
+        data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Please enter username" />
+        <input type="password" id="password" class="rounded" name="password" placeholder="Password" required="true" 
+        data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Please enter password" />
+        <input type="submit" class="rounded" value="Login To Your Account">
+      </form>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>    
+    <script src="js/utils.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
+
