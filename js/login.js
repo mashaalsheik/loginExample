@@ -10,11 +10,11 @@
 			var request = null,
 				serializedData = null;
 			
-			$("#userLogin").submit(function(event){
+			$("form.loginForm").submit(function(event){
 				/*if form has novalidate attribute, handle how to validate*/
 				if (!event.target.checkValidity()) {
 		            event.preventDefault();
-		        	displayErrorMessageForRequiredField();
+		        	displayErrorMessageForRequiredField(this);
 		        } else {  
 				  	if (request) {
 				        request.abort();
@@ -41,9 +41,9 @@
 		};
 
 
-		function displayErrorMessageForRequiredField(){
+		function displayErrorMessageForRequiredField(customForm){
 			/* for every required input field */
-	        $('input[required="true"]').each(function() {
+	        $(customForm).find('input[required="true"]').each(function() {
 	        	/* check if user has not input values */
 	            if( ($(this).val() == $(this).attr('placeholder')) || ($(this).val() == '') ){
 	                $(this).tooltip({trigger:'focus'});
