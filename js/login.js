@@ -3,6 +3,7 @@
 	function Login(){
 
 		this.initialize = function(){
+			setPlaceholders();
 			bindEvents();
 		}
 
@@ -53,6 +54,10 @@
 	            } 
 	        });
 		};
+
+		function setPlaceholders(){
+			$('input').placeholder();
+		}
 
 	};
 
